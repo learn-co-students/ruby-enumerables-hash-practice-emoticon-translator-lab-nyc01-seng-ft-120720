@@ -10,14 +10,12 @@ def load_library(emoticon_list)
 
   emoticons.collect do |key, value|
 key_hash[key] = {}
-      binding.pry
-key_hash = [key][value] 
+key_hash[key][:english] = value[0]
+key_hash[key][:japanese] = value[1]
 
-
-    emoticon_list["get_emoticon"][value[0]] = value[1]  
- emoticon_list["get_meaning"][value[1]] = key
  end 
- emoticon_list
+
+
  end 
  
  
