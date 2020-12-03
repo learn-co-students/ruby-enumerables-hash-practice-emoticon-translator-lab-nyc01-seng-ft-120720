@@ -1,14 +1,17 @@
 
+require 'yaml'
+require 'pry'
 
-
-
-def load_library(emoticon.yml)
-  emoticons = YAML.load_file(emoticon_file)
-  emoticon_list = {"get_meaning" => {}, "get_emoticon" => {}} 
+def load_library(emoticon_list)
+ 
+  emoticons = YAML.load_file(emoticon_list)
+  
   
   emoticons.collect do |key, value|
-    emoticon_list["get_emoticon"][value[0]]
- = value[1]  
+key_hash = {}
+      binding.pry
+
+    emoticon_list["get_emoticon"][value[0]] = value[1]  
  emoticon_list["get_meaning"][value[1]] = key
  end 
  emoticon_list
